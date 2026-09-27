@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#070912">
+<meta name="description" content="Coders — learn programming from zero to advanced.">
+<title>Coders — Learn. Build. Level Up.</title>
+<style>
+:root{--bg:#070912;--panel:#0d1220;--panel2:#11182a;--text:#f7f8ff;--muted:#9ba5bd;--line:#202a40;--a:#8b5cf6;--b:#22d3ee;--good:#34d399;--warn:#fbbf24;--danger:#fb7185;--r:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(900px 500px at 80% -10%,#35206c55,transparent),radial-gradient(700px 400px at 10% 10%,#07598544,transparent),var(--bg);color:var(--text);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.app{min-height:100vh}.top{position:sticky;top:0;z-index:30;backdrop-filter:blur(18px);background:#070912dd;border-bottom:1px solid var(--line);height:64px;display:flex;align-items:center;gap:18px;padding:0 22px}.logo{font-weight:900;font-size:22px;letter-spacing:-1px}.logo i{font-style:normal;color:var(--b)}.search{flex:1;max-width:520px;margin:auto;position:relative}.search input{width:100%;background:#0c1220;border:1px solid var(--line);border-radius:12px;color:var(--text);padding:10px 14px 10px 40px;outline:none}.search input:focus{border-color:#7658e9}.search:before{content:"⌕";position:absolute;left:14px;top:7px;font-size:21px;color:var(--muted)}.top-actions{display:flex;gap:8px}.iconbtn,.btn{border:1px solid var(--line);background:#10172a;color:var(--text);border-radius:11px;padding:9px 13px}.btn.primary{background:linear-gradient(135deg,var(--a),#5b7cfa);border:0}.layout{display:flex;max-width:1500px;margin:auto}.side{width:245px;padding:22px 14px;border-right:1px solid var(--line);min-height:calc(100vh - 64px);position:sticky;top:64px;height:calc(100vh - 64px);overflow:auto}.side button{width:100%;text-align:left;background:transparent;border:0;color:var(--muted);padding:11px 13px;border-radius:11px;margin:2px 0}.side button:hover,.side button.active{background:#151c2e;color:#fff}.side .group{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:#69748d;margin:20px 10px 7px}.main{flex:1;min-width:0;padding:28px}.view{display:none}.view.active{display:block}.hero{padding:48px 0 34px;display:grid;grid-template-columns:1.5fr .8fr;gap:30px;align-items:center}.eyebrow{color:#8fa1c4;text-transform:uppercase;font-size:11px;letter-spacing:.18em;font-weight:800}.hero h1{font-size:clamp(44px,7vw,82px);line-height:.96;letter-spacing:-.06em;margin:12px 0 20px}.gradient{background:linear-gradient(90deg,#fff,#a78bfa,#67e8f9);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:var(--muted);font-size:17px;max-width:680px}.actions{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}.hero-card,.card,.stat,.course,.challenge,.lesson,.profile-card{background:linear-gradient(145deg,#101728dd,#0b1120dd);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:0 18px 55px #0003}.hero-card{padding:24px}.orb{height:220px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#67e8f9,#8b5cf6 34%,#161a3d 62%,transparent 63%);filter:drop-shadow(0 0 45px #8b5cf688);animation:float 5s ease-in-out infinite}@keyframes float{50%{transform:translateY(-12px) rotate(5deg)}}.section{margin:28px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:14px}.section h2{margin:3px 0;font-size:28px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.courses{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card h3,.course h3,.challenge h3{margin:8px 0 5px}.muted{color:var(--muted)}.pill{display:inline-flex;border:1px solid #29334c;border-radius:999px;padding:4px 9px;color:#b9c6df;font-size:11px}.course{min-height:180px;cursor:pointer;transition:.2s}.course:hover,.card:hover,.challenge:hover{transform:translateY(-2px);border-color:#344363}.course .emoji{font-size:28px}.meter{height:8px;background:#182136;border-radius:99px;overflow:hidden}.meter span{display:block;height:100%;background:linear-gradient(90deg,var(--a),var(--b));border-radius:inherit}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.stat strong{font-size:28px;display:block}.stat small{color:var(--muted)}.table{width:100%;border-collapse:collapse}.table th,.table td{padding:13px;border-bottom:1px solid var(--line);text-align:left}.editor{display:grid;grid-template-columns:1fr 1fr;gap:12px}.code{width:100%;min-height:390px;resize:vertical;background:#050811;color:#dbeafe;border:1px solid #26314a;border-radius:14px;padding:18px;font:14px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace;outline:none}.output{min-height:390px;background:#050811;border:1px solid #26314a;border-radius:14px;padding:18px;overflow:auto}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.toolbar select,.toolbar input,.field{background:#0c1220;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:9px 11px}.roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.node{padding:15px;border:1px solid var(--line);border-radius:14px;background:#0d1424}.node.done{border-color:#247b62;background:#0c1e1b}.badge{display:flex;gap:14px;align-items:center;padding:15px;border:1px solid var(--line);border-radius:14px}.badge-icon{font-size:30px}.modal{position:fixed;inset:0;background:#0009;z-index:100;display:none;align-items:center;justify-content:center;padding:20px}.modal.open{display:flex}.modal-box{width:min(720px,100%);max-height:90vh;overflow:auto;background:#0c1220;border:1px solid #2b3855;border-radius:20px;padding:24px}.close{float:right}.toast{position:fixed;right:18px;bottom:18px;z-index:120;background:#111a2d;border:1px solid #33415e;padding:13px 17px;border-radius:12px;display:none}.toast.show{display:block}.footer{padding:50px 0;color:#64708a;text-align:center}.empty{padding:40px;text-align:center;color:var(--muted);border:1px dashed #2b3650;border-radius:15px}.profile{display:flex;gap:18px;align-items:center}.avatar{width:76px;height:76px;border-radius:50%;display:grid;place-items:center;font-size:30px;font-weight:900;background:linear-gradient(135deg,var(--a),var(--b))}.list{display:grid;gap:10px}.row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px;border-bottom:1px solid var(--line)}.tag{font-size:11px;padding:3px 7px;border-radius:7px;background:#192238;color:#b9c6df}.danger{color:var(--danger)}@media(max-width:1050px){.grid,.courses{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.roadmap{grid-template-columns:repeat(2,1fr)}}@media(max-width:760px){.side{position:fixed;left:-260px;z-index:40;background:#080d18;transition:.25s}.side.open{left:0}.main{padding:18px}.top{padding:0 12px}.search{max-width:none}.top-actions .hide-mobile{display:none}.grid,.courses,.stats,.editor{grid-template-columns:1fr}.roadmap{grid-template-columns:1fr}.hero{padding-top:28px}.hero h1{font-size:52px}.orb{height:170px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top">
+<button class="iconbtn" onclick="toggleSide()">☰</button>
+<div class="logo">co<i>ders</i></div>
+<div class="search"><input id="globalSearch" placeholder="Search courses, lessons, challenges… ( / )" oninput="searchAll(this.value)"></div>
+<div class="top-actions"><button class="iconbtn hide-mobile" onclick="showView('dashboard')">⚡ <span id="topXP">0</span></button><button class="iconbtn" onclick="toggleTheme()">◐</button><button class="iconbtn" onclick="showView('profile')">👤</button></div>
+</header>
+<div class="layout">
+<aside class="side" id="side">
+<div class="group">Learn</div>
+<button class="active" data-view="home">⌂ Home</button><button data-view="courses">▦ Courses</button><button data-view="roadmap">⌘ Roadmaps</button><button data-view="editor">▣ Playground</button><button data-view="challenges">◇ Challenges</button>
+<div class="group">Progress</div>
+<button data-view="dashboard">◈ Dashboard</button><button data-view="achievements">♛ Achievements</button><button data-view="leaderboard">♜ Leaderboard</button><button data-view="calendar">▣ Streak calendar</button>
+<div class="group">Build</div>
+<button data-view="projects">◉ Projects</button><button data-view="certificates">✦ Certificates</button><button data-view="profile">◎ Profile</button>
+<div class="group">System</div>
+<button data-view="settings">⚙ Settings</button>
+</aside>
+<main class="main">
+<section class="view active" id="home">
+<div class="hero"><div><div class="eyebrow">Student coding academy</div><h1>Learn code.<br><span class="gradient">Build your future.</span></h1><p>A complete learning workspace for programming from zero to advanced — courses, roadmaps, challenges, projects, XP and developer progress in one place.</p><div class="actions"><button class="btn primary" onclick="showView('courses')">Start learning →</button><button class="btn" onclick="showView('editor')">Open playground</button></div></div><div class="hero-card"><div class="orb"></div><h3>Keep shipping.</h3><p class="muted">Your progress is saved locally in this browser.</p><div class="meter"><span id="heroMeter" style="width:0%"></span></div><small class="muted" id="heroProgress">0% completed</small></div></div>
+<div class="section"><div class="section-head"><div><div class="eyebrow">Your workspace</div><h2>Everything you need to grow</h2></div><button class="btn" onclick="showView('dashboard')">View dashboard</button></div><div class="grid"><article class="card"><div>🧭</div><h3>Structured roadmaps</h3><p class="muted">Move from fundamentals through intermediate concepts, projects and advanced skills.</p></article><article class="card"><div>⚡</div><h3>XP & streaks</h3><p class="muted">Turn learning activity into visible milestones, levels and achievements.</p></article><article class="card"><div>🧪</div><h3>Practice playground</h3><p class="muted">Write HTML, CSS and JavaScript, run it, inspect output and save snippets.</p></article></div></div>
+<div class="section"><div class="section-head"><div><div class="eyebrow">Popular</div><h2>Start with a language</h2></div><button class="btn" onclick="showView('courses')">All courses</button></div><div class="courses" id="homeCourses"></div></div>
+</section>
+<section class="view" id="courses"><div class="section-head"><div><div class="eyebrow">Library</div><h2>Learning tracks</h2><p class="muted">Beginner → intermediate → advanced.</p></div><select class="field" onchange="filterCourses(this.value)"><option value="all">All levels</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></div><div class="courses" id="courseList"></div></section>
+<section class="view" id="roadmap"><div class="eyebrow">Roadmaps</div><h2>Choose your path</h2><div class="grid" id="roadmapCards"></div><div class="section"><div class="eyebrow">Full-stack path</div><h2>From zero to builder</h2><div class="roadmap" id="roadmapNodes"></div></div></section>
+<section class="view" id="editor"><div class="eyebrow">Playground</div><h2>Interactive coding lab</h2><p class="muted">A safe browser sandbox for HTML/CSS/JavaScript. Python and other languages are represented as learning tracks until a secure runtime is connected.</p><div class="toolbar"><select id="editorMode" onchange="loadTemplate(this.value)"><option value="web">HTML + CSS + JS</option><option value="html">HTML</option><option value="css">CSS</option><option value="js">JavaScript</option></select><button class="btn primary" onclick="runCode()">▶ Run</button><button class="btn" onclick="resetCode()">Reset</button><button class="btn" onclick="saveCode()">Save snippet</button><button class="btn" onclick="clearOutput()">Clear output</button></div><div class="editor"><textarea class="code" id="code" spellcheck="false"></textarea><iframe class="output" id="output" sandbox="allow-scripts"></iframe></div></section>
+<section class="view" id="challenges"><div class="section-head"><div><div class="eyebrow">Practice</div><h2>Challenges</h2></div><button class="btn" onclick="dailyChallenge()">Daily challenge</button></div><div class="grid" id="challengeList"></div></section>
+<section class="view" id="dashboard"><div class="eyebrow">Progress</div><h2>Your dashboard</h2><div class="stats"><div class="stat"><strong id="dashXP">0</strong><small>XP</small></div><div class="stat"><strong id="dashLevel">1</strong><small>Level</small></div><div class="stat"><strong id="dashStreak">0</strong><small>Day streak</small></div><div class="stat"><strong id="dashDone">0</strong><small>Completed</small></div></div><div class="section grid"><div class="card"><h3>Level progress</h3><div class="meter"><span id="levelMeter"></span></div><p class="muted" id="levelText"></p></div><div class="card"><h3>Today's mission</h3><p>Complete one lesson or challenge.</p><button class="btn primary" onclick="completeMission()">Complete mission +25 XP</button></div><div class="card"><h3>Saved snippets</h3><p class="muted" id="snippetCount">0 snippets saved locally.</p><button class="btn" onclick="showView('editor')">Open editor</button></div></div><div class="card"><h3>Recent activity</h3><div id="activity"></div></div></section>
+<section class="view" id="achievements"><div class="eyebrow">Milestones</div><h2>Achievements</h2><div class="grid" id="achievementList"></div></section>
+<section class="view" id="leaderboard"><div class="eyebrow">Community</div><h2>Leaderboard</h2><div class="card"><table class="table"><thead><tr><th>#</th><th>Developer</th><th>Level</th><th>XP</th></tr></thead><tbody id="leaders"></tbody></table><p class="muted">Demo leaderboard — your local profile is separate.</p></div></section>
+<section class="view" id="calendar"><div class="eyebrow">Consistency</div><h2>Streak calendar</h2><div class="card"><div id="calendarGrid" style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px"></div><p class="muted">Activity is stored locally on this device.</p></div></section>
+<section class="view" id="projects"><div class="eyebrow">Build</div><h2>Project studio</h2><div class="grid" id="projectList"></div></section>
+<section class="view" id="certificates"><div class="eyebrow">Recognition</div><h2>Certificates</h2><div class="card"><h3>Learning certificates</h3><p class="muted">Complete a course to unlock a printable completion certificate in this browser.</p><div id="certList"></div></div></section>
+<section class="view" id="profile"><div class="eyebrow">Developer profile</div><h2>Profile</h2><div class="profile-card profile"><div class="avatar">A</div><div><h2 style="margin:0">Agastya Tomar</h2><p class="muted">@agastyatomar · Student Developer</p><span class="tag">GitHub identity</span></div></div><div class="section grid"><div class="card"><h3>Level</h3><strong id="profileLevel" style="font-size:34px">1</strong></div><div class="card"><h3>XP</h3><strong id="profileXP" style="font-size:34px">0</strong></div><div class="card"><h3>Achievements</h3><strong id="profileBadges" style="font-size:34px">0</strong></div></div></section>
+<section class="view" id="settings"><div class="eyebrow">Preferences</div><h2>Settings</h2><div class="card list"><div class="row"><span>Theme</span><button class="btn" onclick="toggleTheme()">Toggle theme</button></div><div class="row"><span>Reset local progress</span><button class="btn danger" onclick="resetProgress()">Reset data</button></div><div class="row"><span>Keyboard shortcuts</span><span class="tag">/ search · Esc close</span></div><div class="row"><span>Storage</span><span class="tag">localStorage</span></div></div></section>
+<footer class="footer">Coders · Learn. Build. Level Up. · Built by Agastya Tomar</footer>
+</main></div>
+</div>
+<div class="modal" id="modal"><div class="modal-box"><button class="iconbtn close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div><div class="toast" id="toast"></div>
+<script>
+const COURSES=[
+["HTML","🌐","Build semantic, accessible web pages.","Beginner","12 lessons","#E34F26"],
+["CSS","🎨","Master layout, responsive design and visual systems.","Beginner","16 lessons","#38bdf8"],
+["JavaScript","⚡","Programming fundamentals, DOM, async and APIs.","Beginner","24 lessons","#facc15"],
+["Python","🐍","Syntax, data structures, automation and projects.","Beginner","24 lessons","#60a5fa"],
+["TypeScript","🔷","Types, generics and scalable application patterns.","Intermediate","18 lessons","#3b82f6"],
+["SQL","🗄️","Queries, joins, modeling and database thinking.","Intermediate","18 lessons","#a78bfa"],
+["Java","☕","Object-oriented programming and application design.","Intermediate","22 lessons","#fb923c"],
+["C","⚙️","Memory, pointers, compilation and fundamentals.","Intermediate","20 lessons","#94a3b8"],
+["C++","🚀","Modern C++, STL, OOP and performance.","Advanced","26 lessons","#60a5fa"],
+["C#","🟣","Modern .NET programming and application design.","Intermediate","20 lessons","#c084fc"],
+["Go","🐹","Concurrency, services and backend fundamentals.","Intermediate","18 lessons","#67e8f9"],
+["Rust","🦀","Ownership, borrowing and safe systems programming.","Advanced","22 lessons","#fb7185"],
+["PHP","🐘","Server-side web development fundamentals.","Intermediate","16 lessons","#818cf8"],
+["Ruby","💎","Expressive programming and web foundations.","Intermediate","16 lessons","#f43f5e"],
+["Kotlin","🟠","Modern JVM development and Android foundations.","Intermediate","18 lessons","#fb923c"],
+["Swift","🍎","Modern programming for Apple platforms.","Intermediate","18 lessons","#f97316"],
+["Bash","⌁","Shell automation, files and developer workflows.","Beginner","14 lessons","#a3e635"],
+["Git & GitHub","⑂","Version control, branches, commits and collaboration.","Beginner","14 lessons","#f97316"],
+["React","⚛️","Components, state, hooks and application architecture.","Intermediate","20 lessons","#22d3ee"],
+["Next.js","▲","Full-stack React architecture and deployment.","Advanced","20 lessons","#f8fafc"],
+["Node.js","⬢","JavaScript runtimes, APIs and backend services.","Intermediate","20 lessons","#4ade80"],
+["DSA","🧠","Data structures, algorithms and problem solving.","Advanced","30 lessons","#a78bfa"],
+["APIs","🔌","REST, JSON, authentication and integration patterns.","Intermediate","16 lessons","#22d3ee"],
+["DevOps","☁️","CI/CD, containers, deployment and observability.","Advanced","22 lessons","#38bdf8"],
+["Cybersecurity","🛡️","Security fundamentals, privacy and defensive practice.","Advanced","24 lessons","#34d399"],
+["AI / ML","🤖","Machine learning concepts, data and responsible AI.","Advanced","28 lessons","#c084fc"]
+];
+const CHALLENGES=[
+["First HTML page","HTML","Create a semantic page with a heading, paragraph and list.",25],
+["Flexbox layout","CSS","Build a responsive row of three cards using Flexbox.",40],
+["Counter","JavaScript","Create a button that increments a counter.",50],
+["FizzBuzz","Python","Print numbers 1–100, replacing multiples of 3/5.",60],
+["Type-safe user","TypeScript","Define a User type with id, name and optional bio.",50],
+["SQL joins","SQL","Explain when an INNER JOIN differs from a LEFT JOIN.",50],
+["Git branch","Git & GitHub","Create a feature branch and merge it safely.",40],
+["API fetch","JavaScript","Fetch JSON and render a list of results.",60],
+["Binary search","DSA","Implement binary search and explain its complexity.",100],
+["Portfolio project","Web","Plan and ship a responsive portfolio.",150],
+["Secure input","Cybersecurity","Identify and mitigate an XSS input path.",100],
+["ML pipeline","AI / ML","Describe data split, training, validation and testing.",100]
+];
+const ACH=[
+["🚀","First Step","Complete your first activity.",25],
+["🔥","Code Streak","Build a learning streak.",50],
+["⚡","XP Hunter","Earn 250 XP.",75],
+["🧩","Challenge Solver","Complete a challenge.",75],
+["🛠️","Project Builder","Plan your first project.",100],
+["🏆","Level 5","Reach level 5.",150],
+["📚","Course Explorer","Explore five courses.",50],
+["💻","Playground","Run code in the playground.",50]
+];
+const PROJECTS=[
+["Personal Portfolio","HTML · CSS · JavaScript","Build a polished developer portfolio.","Beginner"],
+["Task Manager","React · TypeScript","Create a typed CRUD productivity app.","Intermediate"],
+["REST API","Node.js · SQL","Build an API with validation and persistence.","Intermediate"],
+["Algorithm Visualizer","JavaScript · DSA","Animate sorting and searching algorithms.","Advanced"],
+["Full-stack Academy","Next.js · APIs","Build a complete learning platform.","Advanced"],
+["Security Lab","Web · Cybersecurity","Practice defensive web security concepts safely.","Advanced"]
+];
+let state=JSON.parse(localStorage.getItem("coders_state")||"null")||{xp:0,done:0,streak:0,badges:[],courses:[],snippets:[],activity:[],visits:0,theme:"dark",mission:false};
+function save(){localStorage.setItem("coders_state",JSON.stringify(state));renderStats()}
+function level(){return Math.max(1,Math.floor(state.xp/100)+1)}
+function toast(t){const x=document.getElementById("toast");x.textContent=t;x.classList.add("show");setTimeout(()=>x.classList.remove("show"),2200)}
+function addXP(n,why){state.xp+=n;state.activity.unshift({t:Date.now(),x:n,why});state.activity=state.activity.slice(0,12);checkAchievements();save();toast("+"+n+" XP · "+why)}
+function checkAchievements(){
+const checks=[state.done>=1, state.streak>=1, state.xp>=250, state.done>=1, state.projects>=1, level()>=5, state.visits>=5, state.ran];
+checks.forEach((ok,i)=>{if(ok&&!state.badges.includes(i)){state.badges.push(i);state.xp+=ACH[i][2];toast("Achievement unlocked: "+ACH[i][1]+" +"+ACH[i][2]+" XP")}})
+}
+function renderStats(){
+document.getElementById("topXP").textContent=state.xp;
+document.getElementById("dashXP").textContent=state.xp;
+document.getElementById("dashLevel").textContent=level();
+document.getElementById("dashStreak").textContent=state.streak;
+document.getElementById("dashDone").textContent=state.done;
+document.getElementById("profileXP").textContent=state.xp;
+document.getElementById("profileLevel").textContent=level();
+document.getElementById("profileBadges").textContent=state.badges.length;
+document.getElementById("snippetCount").textContent=state.snippets.length+" snippets saved locally.";
+const pct=state.xp%100;document.getElementById("levelMeter").style.width=pct+"%";document.getElementById("heroMeter").style.width=Math.min(100,state.done*5)+"%";
+document.getElementById("levelText").textContent=pct+" / 100 XP toward level "+(level()+1);
+document.getElementById("heroProgress").textContent=Math.min(100,state.done*5)+"% completed";
+const act=document.getElementById("activity");act.innerHTML=state.activity.length?state.activity.map(a=>"<div class='row'><span>"+escape(a.why)+"</span><b>+"+a.x+" XP</b></div>").join(""):"<div class='empty'>No activity yet. Start learning.</div>";
+}
+function escape(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]||c))}
+function showView(id){document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id===id));document.querySelectorAll(".side button[data-view]").forEach(b=>b.classList.toggle("active",b.dataset.view===id));document.getElementById("side").classList.remove("open");window.scrollTo({top:0,behavior:"smooth"});state.visits++;checkAchievements();save()}
+document.querySelectorAll(".side button[data-view]").forEach(b=>b.onclick=()=>showView(b.dataset.view));
+function toggleSide(){document.getElementById("side").classList.toggle("open")}
+function renderCourses(list=COURSES){
+const html=list.map((c,i)=>"<article class='course' onclick='openCourse("+i+")'><div class='emoji'>"+c[1]+"</div><span class='pill'>"+c[3]+"</span><h3>"+c[0]+"</h3><p class='muted'>"+c[2]+"</p><small class='muted'>"+c[4]+" · "+(state.courses.includes(i)?"In progress":"Start")+"</small></article>").join("");
+document.getElementById("courseList").innerHTML=html;document.getElementById("homeCourses").innerHTML=COURSES.slice(0,6).map((c,i)=>"<article class='course' onclick='showView("courses");openCourse("+i+")'><div class='emoji'>"+c[1]+"</div><span class='pill'>"+c[3]+"</span><h3>"+c[0]+"</h3><p class='muted'>"+c[2]+"</p></article>").join("")
+}
+function filterCourses(v){renderCourses(v==="all"?COURSES:COURSES.filter(c=>c[3]===v))}
+function openCourse(i){const c=COURSES[i];document.getElementById("modalContent").innerHTML="<div class='eyebrow'>Course</div><h2>"+c[1]+" "+c[0]+"</h2><p class='muted'>"+c[2]+"</p><div class='roadmap'>"+["Fundamentals","Core concepts","Practice","Projects"].map((x,j)=>"<div class='node "+(j===0?"done":"")+"'><b>"+(j+1)+". "+x+"</b><p class='muted'>"+(j===0?"Start now":"Locked until the previous stage")+"</p></div>").join("")+"</div><div class='toolbar'><button class='btn primary' onclick='completeCourse("+i+")'>Complete course demo</button><button class='btn' onclick='closeModal()'>Close</button></div>";openModal()}
+function completeCourse(i){if(!state.courses.includes(i)){state.courses.push(i);state.done++;addXP(100,"Completed "+COURSES[i][0]+" course");}closeModal();renderCourses();renderStats()}
+function openModal(){document.getElementById("modal").classList.add("open")}function closeModal(){document.getElementById("modal").classList.remove("open")}
+function renderChallenges(){document.getElementById("challengeList").innerHTML=CHALLENGES.map((c,i)=>"<article class='challenge'><span class='pill'>"+c[1]+"</span><h3>"+c[0]+"</h3><p class='muted'>"+c[2]+"</p><button class='btn primary' onclick='solve("+i+")'>Complete +"+c[3]+" XP</button></article>").join("")}
+function solve(i){addXP(CHALLENGES[i][3],"Solved: "+CHALLENGES[i][0]);state.done++;state.streak=Math.max(1,state.streak);save()}
+function dailyChallenge(){const c=CHALLENGES[new Date().getDate()%CHALLENGES.length];document.getElementById("modalContent").innerHTML="<div class='eyebrow'>Daily challenge</div><h2>"+c[0]+"</h2><p>"+c[2]+"</p><span class='pill'>+"+c[3]+" XP</span><div class='toolbar'><button class='btn primary' onclick='solve("+CHALLENGES.indexOf(c)+");closeModal()'>Mark complete</button></div>";openModal()}
+function completeMission(){if(state.mission)return toast("Mission already completed today.");state.mission=true;addXP(25,"Daily mission");}
+function renderRoadmaps(){document.getElementById("roadmapCards").innerHTML=[["Web Developer","HTML → CSS → JS → Git → React → Next.js"],["Backend Developer","Python/Node → APIs → SQL → Auth → Deployment"],["Problem Solver","Programming → DSA → Algorithms → Competitive practice"],["AI Builder","Python → Data → ML → APIs → AI applications"]].map(x=>"<article class='card'><h3>"+x[0]+"</h3><p class='muted'>"+x[1]+"</p><button class='btn' onclick='toast("Roadmap started")'>Start path</button></article>").join("");document.getElementById("roadmapNodes").innerHTML=["HTML","CSS","JavaScript","Git","React","APIs","SQL","Testing","Deployment","Advanced Project"].map((x,i)=>"<div class='node "+(i<Math.min(state.done,3)?"done":"")+"'><b>"+(i+1)+"</b><h3>"+x+"</h3><small class='muted'>"+(i<3?"Foundation":"Next milestone")+"</small></div>").join("")}
+function renderAchievements(){document.getElementById("achievementList").innerHTML=ACH.map((a,i)=>"<article class='badge' style='opacity:"+(state.badges.includes(i)?1:.45)+"'><div class='badge-icon'>"+a[0]+"</div><div><h3 style='margin:0'>"+a[1]+"</h3><p class='muted' style='margin:3px 0'>"+a[2]+"</p><small>+"+a[2+0]+" XP</small></div></article>").join("")}
+function renderLeaders(){const names=["CodeNova","ByteSmith","Aadi","PixelDev","SyntaxFox","StackPilot","AlgoMind","WebForge"];document.getElementById("leaders").innerHTML=names.map((n,i)=>"<tr><td>"+(i+1)+"</td><td>"+n+"</td><td>"+(12-i)+"</td><td>"+(1200-i*103)+"</td></tr>").join("")}
+function renderProjects(){document.getElementById("projectList").innerHTML=PROJECTS.map((p,i)=>"<article class='card'><span class='pill'>"+p[3]+"</span><h3>"+p[0]+"</h3><p class='muted'>"+p[1]+"</p><p>"+p[2]+"</p><button class='btn primary' onclick='startProject("+i+")'>Start project</button></article>").join("")}
+function startProject(i){state.projects=(state.projects||0)+1;addXP(30,"Started "+PROJECTS[i][0]);save()}
+function renderCertificates(){document.getElementById("certList").innerHTML=state.courses.length?state.courses.map(i=>"<div class='row'><span>🏅 "+COURSES[i][0]+" completion certificate</span><button class='btn' onclick='certificate("+i+")'>View</button></div>").join(""):"<div class='empty'>Complete a course to unlock a certificate.</div>"}
+function certificate(i){document.getElementById("modalContent").innerHTML="<div style='padding:35px;text-align:center;border:2px solid #8b5cf6;border-radius:18px'><div class='eyebrow'>Certificate of completion</div><h1>Coders</h1><p>This certifies that</p><h2>Agastya Tomar</h2><p>completed the <b>"+COURSES[i][0]+"</b> learning track.</p><p class='muted'>Issued locally · "+new Date().toLocaleDateString()+"</p><button class='btn primary' onclick='window.print()'>Print certificate</button></div>";openModal()}
+function renderCalendar(){let h="";for(let i=0;i<84;i++){const active=i<state.streak?"background:#8b5cf6":"background:#141c2d";h+="<div title='Day "+(i+1)+"' style='height:28px;border-radius:5px;"+active+"'></div>"}document.getElementById("calendarGrid").innerHTML=h}
+function template(type){if(type==="html")return "<h1>Hello Coders</h1>\n<p>Build something.</p>";if(type==="css")return "<style>body{font-family:system-ui;background:#101827;color:white;padding:40px}h1{color:#67e8f9}</style>\n<h1>Styled page</h1>";if(type==="js")return "<!doctype html><html><body><button id='b'>Click me</button><script>let n=0;document.querySelector('#b').onclick=()=>document.querySelector('#b').textContent='Clicks: '+(++n)<\\/script></body></html>";return "<!doctype html><html><head><style>body{font-family:system-ui;background:#0b1020;color:white;padding:40px}button{padding:12px 18px;border:0;border-radius:10px;background:#8b5cf6;color:white}</style></head><body><h1>Hello, Coders 👋</h1><p>Start editing this project.</p><button onclick='this.textContent="It works!"'>Run action</button></body></html>"}
+function loadTemplate(t){document.getElementById("code").value=template(t)}
+function runCode(){const src=document.getElementById("code").value;document.getElementById("output").srcdoc=src;state.ran=true;addXP(10,"Ran code in playground")}
+function resetCode(){loadTemplate(document.getElementById("editorMode").value)}
+function clearOutput(){document.getElementById("output").srcdoc=""}
+function saveCode(){state.snippets.push({code:document.getElementById("code").value,date:Date.now()});save();toast("Snippet saved locally")}
+function searchAll(q){q=q.trim().toLowerCase();if(!q)return;const c=COURSES.find(x=>x[0].toLowerCase().includes(q)||x[2].toLowerCase().includes(q));if(c){showView("courses");filterCourses("all")}}
+function toggleTheme(){document.body.dataset.light=document.body.dataset.light==="1"?"":"1";if(document.body.dataset.light){document.body.style.setProperty("--bg","#f5f7fb");document.body.style.setProperty("--text","#111827");document.body.style.setProperty("--panel","#fff");document.body.style.setProperty("--muted","#5d687c")}else{document.body.style.removeProperty("--bg");document.body.style.removeProperty("--text");document.body.style.removeProperty("--panel");document.body.style.removeProperty("--muted")}}
+function resetProgress(){if(confirm("Reset all local Coders progress?")){localStorage.removeItem("coders_state");location.reload()}}
+document.addEventListener("keydown",e=>{if(e.key==="/"&&document.activeElement.tagName!=="INPUT"&&document.activeElement.tagName!=="TEXTAREA"){e.preventDefault();document.getElementById("globalSearch").focus()}if(e.key==="Escape")closeModal()});
+document.getElementById("modal").addEventListener("click",e=>{if(e.target.id==="modal")closeModal()});
+renderCourses();renderChallenges();renderRoadmaps();renderAchievements();renderLeaders();renderProjects();renderCertificates();renderCalendar();loadTemplate("web");renderStats();
+</script>
+</body>
+</html>
